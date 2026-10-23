@@ -1,12 +1,7 @@
-
-![penguins](https://github.com/cs4804-24c/a2-DataVis-5Ways/assets/412089/accc5680-3c77-4d29-9502-d3ff8cd922af)
-
-# 02-DataVis-5ways
-
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make an *actual visualization*... 5 times. 
 
 The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
 
@@ -19,7 +14,7 @@ Your goal is to use 5 different tools to make the following chart:
 
 These features should be preserved as much as possible in your replication:
 
-- Data positioning: it should be a upward-trending scatterplot as shown.  Flipper Length should be on the x-axis and Body Mass on the y-axis.
+- Data positioning: it should be an upward-trending scatterplot as shown.  Flipper Length should be on the x-axis and Body Mass on the y-axis.
 - Scales: Note the scales do not start at 0.
 - Axis ticks and labels: both axes are labeled and there are tick marks at a reasonable interval, e.g 10, 20, 30, etc.
 - Color mapping to species.
@@ -61,9 +56,9 @@ I have marked a few that are strongly suggested.
 - p5js `<- good for playing around. not really a chart lib`
 - Tableau
 - PowerBI
-- Vega-lite <- `<- very interesting formal visualization model; might be the future of the field`
-- Flourish <- `<- popular in recent years`
-- DataWrapper <- `<- popular in recent years`
+- Vega-lite `<- very interesting formal visualization model; might be the future of the field`
+- Flourish `<- popular in recent years`
+- DataWrapper `<- popular in recent years`
 - GNUplot `<- the former CS department head uses this all the time :)`
 - SAS/SPSS/Matlab
 
@@ -78,8 +73,10 @@ You will likely use the [`d3.json` or `d3.csv` functions](https://d3js.org/d3-ds
 
 **Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads. Figuring out how to do this properly can be a major hiccup if you haven't used async functions before. If this means you, start part of this project early so you don't end up in a rush!**
 
+- `penglings.csv` has a few rows with `NA` values (two have no measurements at all). Filter them out before you plot (in d3, converting `"NA"` to a number gives `NaN`, which breaks scales and circle positions).
+
 - *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See my a1 video or online tutorials for how to do this.
+Same as A1: run `python3 -m http.server` in your repo folder and visit http://localhost:8000.
 Being able to host a local webserver is an essential web development skill and very common in visualization design as well.
 
 Readme Requirements
@@ -109,7 +106,11 @@ GitHub Details
 
 - Fork the GitHub Repository. You now have a copy associated with your username.
 - Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+- To submit, make a [Pull Request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request-from-a-fork) on the original repository, and put the link to your pull request in the A2 assignment on Canvas.
+- Note: name your pull request using the following scheme: 
+```
+a2-your Gh username-your first name-your lastname
+```
 
 Grading
 ---
@@ -129,7 +130,7 @@ R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.
 R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+To visualize the penguins dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
 
